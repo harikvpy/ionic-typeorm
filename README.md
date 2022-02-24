@@ -20,7 +20,9 @@ But if you are keen to know the steps involved in arriving at the solution, here
 1. Create a basic Angular project. For this project I used `ionic-cli` to create a blank app.
    
    ```
-   $ ionic start ionic-typeorm blank --type=ionic-angular --capacitor
+   $ ionic start ionic-typeorm
+   ```
+   Choose `blank` project template, `Angular` project type and `Capacitor` integration. *Project type doesn't really matter*.
 
 2. Install the following additional packages:
 

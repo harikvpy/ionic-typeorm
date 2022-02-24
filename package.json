@@ -28,7 +28,7 @@
     "rxjs": "~6.6.0",
     "sql.js": "^1.6.2",
     "tslib": "^2.2.0",
-    "typeorm": "file:../../typeorm/build/package",
+    "typeorm": "^0.2.44",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

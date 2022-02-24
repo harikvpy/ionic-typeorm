@@ -55,7 +55,7 @@ But if you are keen to know the steps involved in arriving at the solution, here
         ...
       }
       ```
-6. Change the angular configuration to use a different builder (`@angular-builders`) from the default. This builder allows us to specify a custom webpack configuration which is necessary to load the SQLite web assembly module in the browser. So update `angular.json`:
+6. Change the angular configuration to use a different builder (`@angular-builders`) from the default. This builder allows us to specify a custom webpack configuration which is necessary to load the SQLite web assembly module in the browser. Also see how *.wasm is added to the assets list so that it's copied to the output root folder (where `sql-wasm.js` loads it from). So update `angular.json`:
 
    ```
    {

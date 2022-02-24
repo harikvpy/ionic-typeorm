@@ -1,0 +1,7 @@
+{
+  "name": "new-blankapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

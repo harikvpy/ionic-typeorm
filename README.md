@@ -8,7 +8,7 @@ This is a sample project that shows how [TypeORM](https://typeorm.io) with [sql.
 | Angular   | 13       |
 | Ionic     | 6        |
 | Ionic CLI |  6.18.1 |
-| TypeORM(see note)   | 0.2.43 |
+| TypeORM   | 0.2.44 |
 | sql.js    | 1.6.2 |
 
 
@@ -120,10 +120,7 @@ But if you are keen to know the steps involved in arriving at the solution, here
    Note how we load the sqlite WASM plugin via a new plugin config. Also the resolve dictionary settings are key to get the whole thing to work properly.
 
 
-If all went well, you should be able to create SQL tables and query them using TypeORM API.
-
-## TypeORM Note
-The 0.2.43 official release of TypeORM has a bug that as of this writing has been fixed in the code, but a production build including this build has not been uploaded to npmjs. Therefore, please clone the latest code from TypeORM repo, build it locally (use `npm run package` after creating a config file. See instructions in `DEVELOPER.md`) and install the package from the build output (`npm install <local-repo-path>`).
+If all went well, you should be able to create SQL tables and query them using TypeORM API. When you run the app for the first time, it'll create a `user` table with mock user records. Subsequently everytime the app runs, it'll query these records and log them to the console. So if you see log a message that begins 'All users:...' all is well.
 
 ## References
 1. This [article](https://www.techiediaries.com/ionic-angular-typeorm-custom-webpack-configuration/) got me started. It's a little outdated, which warranted this repo and readme.

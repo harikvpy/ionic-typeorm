@@ -1,6 +1,6 @@
 # TypeORM & sql.js integration with Angular
 
-This is a sample project that shows how TypeORM with sql.js can be integrated with an Angular project. This project uses Ionic as a frontend, but that should be irrelevant and the approach ought to work with any Angular project.
+This is a sample project that shows how [TypeORM](https://typeorm.io) with [sql.js](https://sql.js.org) can be integrated with an Angular project. This project uses Ionic as a frontend, but that should be irrelevant and the approach ought to work with any Angular project.
 
 ## Versions
 | Framework | Version |
@@ -13,9 +13,9 @@ This is a sample project that shows how TypeORM with sql.js can be integrated wi
 
 
 ## Steps
-You can of course clone this repo and test use it for your projects.
+You can of course clone this repo and use it for your projects.
 
-But, if you are keen to know the steps involved in arriving at the solution, here it goes:
+But if you are keen to know the steps involved in arriving at the solution, here it goes:
 
 1. Create a basic Angular project. For this project I used `ionic-cli` to create a blank app.
    
@@ -29,6 +29,7 @@ But, if you are keen to know the steps involved in arriving at the solution, her
    $ npm install @types/node @angular-builders/custom-webpack --save-dev
    ```
 3. Copy `./node_modules/sql.js/dist/sql-wasm.wasm` to `src/assets` folder. We’ll update angular.json so that this file is copied to the site root folder (`sql-wasm.js` expects it to be available at site root) during build.
+
 4. Update tsconfig.json so as to add `node_modules/@types` to `typeRoots`. Also set `emitDecoratorMetadata` & `skipLibCheck` properties to true.
       ```
       {
@@ -124,6 +125,9 @@ If all went well, you should be able to create SQL tables and query them using T
 ## TypeORM Note
 The 0.2.43 official release of TypeORM has a bug that as of this writing has been fixed in the code, but a production build including this build has not been uploaded to npmjs. Therefore, please clone the latest code from TypeORM repo, build it locally (use `npm run package` after creating a config file. See instructions in `DEVELOPER.md`) and install the package from the build output (`npm install <local-repo-path>`).
 
+## References
+1. This [article](https://www.techiediaries.com/ionic-angular-typeorm-custom-webpack-configuration/) got me started. It's a little outdated, which warranted this repo and readme.
+2. Relevant project docs and their GitHub issues
 
 ## Disclaimer
-This is a sample code provided AS IS and no warranty is made to its accuracy or reliability. If you found any issues, please create an issue and I'll be happy to look into it.
+Code is provided AS IS with no warranty to its accuracy or reliability. That said, if you find any issues, please use the Github issue tracker and I'll be happy to look into it.

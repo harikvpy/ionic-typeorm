@@ -1,4 +1,4 @@
-# TypeORM & sql.js integration with an Angular
+# TypeORM & sql.js integration with Angular
 
 This is a sample project that shows how TypeORM with sql.js can be integrated with an Angular project. This project uses Ionic as a frontend, but that should be irrelevant and the approach ought to work with any Angular project.
 
